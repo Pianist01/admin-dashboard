@@ -61,14 +61,15 @@ a {
     grid-column: 2/5;
     display: grid;
     grid-template-columns: 2fr 2fr;
-    grid-template-rows: 2fr 1fr;
+    grid-template-rows: .5fr;
   }
 
-header input {
+  header input {
     grid-column: 1/2;
     grid-row: 1/2;
     justify-self: start;
-    align-self: center;
+    align-self: start;
+    margin-top: 3%;
     margin-left: 50px;
   }
 
@@ -81,7 +82,8 @@ header input {
     grid-column: 1;
     grid-row: 1/2;
     justify-self: start;
-    align-self: center;
+    align-self: start;
+    margin-top: 3%;
     width: 30px;
     height: 30px;
   }
@@ -89,44 +91,51 @@ header input {
   header .name {
     grid-column: 2/4;
     grid-row: 1/2;
-    align-self: center;
-    justify-self: end;
+    align-self: start;
+    justify-self: center;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-style: bold;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+    margin-right: -25%;
+    margin-top: 2.5%;
   }
 
   header .steven {
     grid-column: 2/3;
     grid-row: 1/2;
-    justify-self: end;
-    align-self: center;
-    width: 80px;
-    height: 80px;
-    margin-left: -50px;
+    justify-self: center;
+    align-self: start;
+    width: 100px;
+    height: 100px;
+    margin-right: 15%;
+    margin-top: -2.5%;
   }
 
   header .bell {
     grid-column: 2/3;
     grid-row: 1/2;
-    align-self: center;
+    align-self: start;
     justify-self: center;
+    margin-left: -35%;
+    margin-top: 3%;
+    width: 25px;
+    height: 25px;
   }
 
-header .steven-2 {
+  header .steven-2 {
     grid-column: 1/2;
-    grid-row: 2/3;
-    align-self: center;
+    grid-row: 1/2;
+    align-self: end;
     width: 120px;
     height: 100px;
   }
 
   header .greeting {
     grid-column: 1/2;
-    grid-row: 2;
+    grid-row: 1/2;
     justify-self: start;
     margin-left: 15%;
-    margin-top: -7%;
+    margin-top: 19%;
     align-self: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-weight: medium;
@@ -134,10 +143,11 @@ header .steven-2 {
 
   header .user-handle {
     grid-column: 1/2;
-    grid-row: 2;
+    grid-row: 1/2;
     justify-self: center;
-    align-self: center;
-    margin-right: 33%;
+    align-self: end;
+    margin-right: 37%;
+    margin-bottom: 3%;
     font-size: 1.5rem;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   }
@@ -147,30 +157,30 @@ header .steven-2 {
 
   header .upload {
     grid-column: 2/3;
-    grid-row: 2;
+    grid-row: 1/2;
     width: 110px;
     height: 45px;
-    align-self: center;
+    align-self: end;
     border-radius: 50px;
     justify-self: center;
   }
 
   header .new {
     grid-column: 2/3;
-    grid-row: 2;
+    grid-row: 1/2;
     width: 110px;
     height: 45px;
-    align-self: center;
+    align-self: end;
     border-radius: 50px;
     margin-left: 20%;
   }
 
   header .share {
     grid-column: 2/3;
-    grid-row: 2;
+    grid-row: 1/2;
     width: 110px;
     height: 45px;
-    align-self: center;
+    align-self: end;
     justify-self: end;
     border-radius: 50px;
     margin-right: 20%;
@@ -189,13 +199,14 @@ header .steven-2 {
 .sidebar-content{
   display: grid;
   grid-template-rows: 2fr repeat(7, 1fr) 2fr repeat(3, 1fr);
-  /* gap: 15px; */
+  gap: 15px;
 }
 
 .sidebar-content .logo {
   grid-column: 1/2;
   grid-row: 1;
-  margin-left: 20%;
+  margin-left: 10%;
+  margin-top: 5%;
 }
 
 .sidebar-content h1 {
@@ -203,6 +214,8 @@ header .steven-2 {
   grid-row: 1;
   justify-self: center;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-right: 20%;
+  margin-top: 5%;;
 }
 
 .sidebar .home {
@@ -218,7 +231,7 @@ header .steven-2 {
   grid-column: 1/2;
   justify-self: center;
   align-self: center;
-  margin-right: 50%;
+  margin-right: 70%;
 }
 
 .sidebar .profile {
@@ -229,12 +242,28 @@ header .steven-2 {
   margin: var(--margin-link);
 }
 
+.sidebar .user {
+  grid-row: 4/5;
+  grid-column: 1/2;
+  justify-self: center;
+  align-self: center;
+  margin-right: 70%;
+}
+
 .sidebar .messages {
   grid-row: 5/6;
   grid-column: 1/2;
   justify-self: center;
   align-self: center;
   margin: var(--margin-link);
+}
+
+.sidebar .message {
+  grid-row: 5/6;
+  grid-column: 1/2;
+  justify-self: center;
+  align-self: center;
+  margin-right: 70%;
 }
 
 .sidebar .history {
@@ -245,12 +274,28 @@ header .steven-2 {
   margin: var(--margin-link);
 }
 
+.sidebar .past {
+  grid-row: 6/7;
+  grid-column: 1/2;
+  justify-self: center;
+  align-self: center;
+  margin-right: 70%;
+}
+
 .sidebar .tasks {
   grid-row: 7/8;
   grid-column: 1/2;
   justify-self: center;
   align-self: center;
   margin: var(--margin-link);
+}
+
+.sidebar .task {
+  grid-row: 7/8;
+  grid-column: 1/2;
+  justify-self: center;
+  align-self: center;
+  margin-right: 70%;
 }
 
 .sidebar .communities {
@@ -261,12 +306,28 @@ header .steven-2 {
   margin: var(--margin-link);
 }
 
+.sidebar .community {
+  grid-row: 8/9;
+  grid-column: 1/2;
+  justify-self: center;
+  align-self: center;
+  margin-right: 70%;
+}
+
 .sidebar .settings {
   grid-row: 10/11;
   grid-column: 1/2;
   justify-self: center;
   align-self: center;
   margin: var(--margin-link);
+}
+
+.sidebar .sett {
+  grid-row: 10/11;
+  grid-column: 1/2;
+  justify-self: center;
+  align-self: center;
+  margin-right: 70%;
 }
 
 .sidebar .support {
@@ -277,6 +338,14 @@ header .steven-2 {
   margin: var(--margin-link);
 }
 
+.sidebar .supp {
+  grid-row: 11/12;
+  grid-column: 1/2;
+  justify-self: center;
+  align-self: center;
+  margin-right: 70%;
+}
+
 .sidebar .privacy {
   grid-row: 12/13;
   grid-column: 1/2;
@@ -285,11 +354,31 @@ header .steven-2 {
   margin: var(--margin-link);
 }
 
-
+.sidebar .private {
+  grid-row: 12/13;
+  grid-column: 1/2;
+  justify-self: center;
+  align-self: center;
+  margin-right: 70%;
+}
 /* SIDEBAR END */
 
 /* CONTENT START */
 
-main {
-  grid-column: 2/4;
+.content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-column: 2/5;
+}
+
+.content .content-div {
+  display: grid;
+}
+
+.content-div .card {
+  height: 100px;
+}
+
+.content-div .announce {
+  grid-column: 4/5;
 }
